@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tschick – Modern Movie Website</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#0b0b0b;
+    color:white;
+    line-height:1.7;
+}
+
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:rgba(0,0,0,0.9);
+    backdrop-filter:blur(8px);
+    padding:18px;
+    z-index:1000;
+}
+
+nav ul{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:25px;
+    list-style:none;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#f4c542;
+}
+
+.hero{
+    height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.8)),
+    url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1600");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.hero-content h1{
+    font-size:5rem;
+    letter-spacing:5px;
+    margin-bottom:20px;
+}
+
+.hero-content p{
+    font-size:1.3rem;
+    max-width:700px;
+    margin:auto;
+}
+
+.hero-content button{
+    margin-top:35px;
+    padding:15px 35px;
+    border:none;
+    background:#f4c542;
+    color:black;
+    font-size:1rem;
+    font-weight:bold;
+    border-radius:30px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.hero-content button:hover{
+    transform:scale(1.05);
+}
+
+section{
+    padding:100px 10%;
+}
+
+.section-title{
+    font-size:2.5rem;
+    margin-bottom:40px;
+    text-align:center;
+    color:#f4c542;
+}
+
+.info-box{
+    background:#171717;
+    padding:35px;
+    border-radius:20px;
+    max-width:900px;
+    margin:auto;
+}
+
+.info-box p{
+    margin-bottom:15px;
+}
+
+.characters{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:#171717;
+    border-radius:20px;
+    overflow:hidden;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card img{
+    width:100%;
+    height:320px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:25px;
+}
+
+.card-content h3{
+    color:#f4c542;
+    margin-bottom:15px;
+}
+
+.card-content ul{
+    padding-left:20px;
+}
+
+.card-content li{
+    margin-bottom:10px;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a href="#buch">Buch</a></li>
+        <li><a href="#charaktere">Charaktere</a></li>
+        <li><a href="#galerie">Galerie</a></li>
+        <li><a href="#trailer">Trailer</a></li>
+        <li><a href="#funfacts">Fun Facts</a></li>
+        <li><a href="#quiz">Quiz</a></li>
+    </ul>
+</nav>
+
+<header class="hero">
+    <div class="hero-content">
+        <h1>TSCHICK</h1>
+
+        <p>
+            „Manchmal beginnt das größte Abenteuer mit einem gestohlenen Auto.“
+            Begleite Maik und Tschick auf ihrem unvergesslichen Roadtrip durch den Sommer.
+        </p>
+
+        <button onclick="document.getElementById('buch').scrollIntoView()">
+            Film entdecken
+        </button>
+    </div>
+</header>
+
+<section id="buch">
+    <h2 class="section-title">Über das Buch</h2>
+
+    <div class="info-box">
+
+        <p><strong>Autor:</strong> Wolfgang Herrndorf</p>
+
+        <p><strong>Erscheinungsjahr:</strong> 2010</p>
+
+        <p><strong>Genre:</strong> Jugendroman / Roadtrip / Coming-of-Age</p>
+
+        <p>
+            Der 14-jährige Maik Klingenberg verbringt die Sommerferien allein,
+            bis plötzlich sein neuer Mitschüler Andrej „Tschick“
+            Tschichatschow mit einem gestohlenen Lada auftaucht.
+        </p>
+
+        <p>
+            Gemeinsam machen sie sich auf den Weg in die Walachei
+            und erleben einen Sommer voller Freundschaft,
+            Freiheit und unerwarteter Begegnungen.
+        </p>
+
+    </div>
+</section>
+
+<section id="charaktere">
+
+    <h2 class="section-title">Die Charaktere</h2>
+
+    <div class="characters">
+
+        <div class="card">
+
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Portrait_Placeholder.png/800px-Portrait_Placeholder.png"
+            alt="Maik">
+
+            <div class="card-content">
+
+                <h3>Maik Klingenberg</h3>
+
+                <ul>
+                    <li>14 Jahre alt</li>
+                    <li>Schüchtern und unsicher</li>
+                    <li>Erzählt die Geschichte</li>
+                    <li>Fühlt sich als Außenseiter</li>
+                    <li>Entwickelt mehr Selbstvertrauen</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Portrait_Placeholder.png/800px-Portrait_Placeholder.png"
+            alt="Tschick">
+
+            <div class="card-content">
+
+                <h3>Andrej „Tschick“ Tschichatschow</h3>
+
+                <ul>
+                    <li>Maiks Mitschüler</li>
+                    <li>Kommt aus Russland</li>
+                    <li>Mutig und spontan</li>
+                    <li>Riecht oft nach Alkohol</li>
+                    <li>Verändert Maiks Leben</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Portrait_Placeholder.png/800px-Portrait_Placeholder.png"
+            alt="Isa">
+
+            <div class="card-content">
+
+                <h3>Isa</h3>
+
+                <ul>
+                    <li>Treffen die Jungen unterwegs</li>
+                    <li>Unabhängig und direkt</li>
+                    <li>Lebt zeitweise auf einer Müllkippe</li>
+                    <li>Selbstbewusst</li>
+                    <li>Bleibt in Erinnerung</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Portrait_Placeholder.png/800px-Portrait_Placeholder.png"
+            alt="Tatjana">
+
+            <div class="card-content">
+
+                <h3>Tatjana Cosic</h3>
+
+                <ul>
+                    <li>Maiks heimliche Liebe</li>
+                    <li>Beliebt in der Schule</li>
+                    <li>Veranstaltet die Geburtstagsparty</li>
+                    <li>Weiß nichts von Maiks Gefühlen</li>
+                    <li>Steht für Maiks Sehnsüchte</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- PART 2 STARTS HERE IN THE NEXT MESSAGE -->
+<section id="galerie">
+
+    <h2 class="section-title">Bildergalerie</h2>
+
+    <div class="characters">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1200" alt="Landstraße">
+            <div class="card-content">
+                <h3>Die Reise</h3>
+                <p>Eine endlose Straße, die Freiheit und Abenteuer symbolisiert.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1489824904134-891ab64532f1?w=1200" alt="Auto">
+            <div class="card-content">
+                <h3>Der Roadtrip</h3>
+                <p>Maik und Tschick brechen aus ihrem Alltag aus.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200" alt="Sommer">
+            <div class="card-content">
+                <h3>Sommergefühl</h3>
+                <p>Der Sommer wird zur wichtigsten Zeit ihres Lebens.</p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section id="trailer">
+
+    <h2 class="section-title">Trailer</h2>
+
+    <div class="info-box">
+
+        <p>Sieh dir die Verfilmung von <strong>Tschick</strong> an:</p>
+
+        <br>
+
+        <iframe width="100%" height="450"
+        src="https://www.youtube.com/embed/e3Ms0uU6NDc"
+        title="Tschick Trailer"
+        allowfullscreen>
+        </iframe>
+
+        <br><br>
+
+        <iframe width="100%" height="450"
+        src="https://www.youtube.com/embed/Rg9dq3-Qt-I"
+        title="Tschick Trailer 2"
+        allowfullscreen>
+        </iframe>
+
+    </div>
+
+</section>
+
+
+<section id="funfacts">
+
+    <h2 class="section-title">Fun Facts</h2>
+
+    <div class="info-box">
+
+        <p>🌻 Wolfgang Herrndorf schrieb große Teile des Romans während seiner Krankheit.</p>
+
+        <p>🚗 Das Buch wurde in mehr als 25 Sprachen übersetzt.</p>
+
+        <p>🎬 2016 wurde „Tschick“ erfolgreich verfilmt.</p>
+
+        <p>🏆 Der Roman gewann zahlreiche Preise.</p>
+
+        <p>📚 Viele Schulen lesen „Tschick“ im Deutschunterricht.</p>
+
+    </div>
+
+</section>
+
+
+<section id="quiz">
+
+    <h2 class="section-title">Tschick Expertenquiz</h2>
+
+    <div class="info-box">
+
+        <form id="quizForm">
+
+            <p><strong>1. Wie heißt Tschick mit Nachnamen?</strong></p>
+            <label><input type="radio" name="q1" value="0"> Tschernow</label><br>
+            <label><input type="radio" name="q1" value="1"> Tschichatschow</label><br><br>
+
+
+            <p><strong>2. Warum ist Maiks Mutter oft abwesend?</strong></p>
+            <label><input type="radio" name="q2" value="1"> Sie ist in einer Entzugsklinik.</label><br>
+            <label><input type="radio" name="q2" value="0"> Sie arbeitet im Ausland.</label><br><br>
+
+
+            <p><strong>3. Wohin fährt Maiks Vater?</strong></p>
+            <label><input type="radio" name="q3" value="0"> Nach Italien.</label><br>
+            <label><input type="radio" name="q3" value="1"> Mit seiner Assistentin in den Urlaub.</label><br><br>
+
+
+            <p><strong>4. Was schenkt Maik Tatjana?</strong></p>
+            <label><input type="radio" name="q4" value="1"> Ein selbst gemaltes Bild.</label><br>
+            <label><input type="radio" name="q4" value="0"> Blumen.</label><br><br>
+
+
+            <p><strong>5. Welches Auto fahren die Jungen?</strong></p>
+            <label><input type="radio" name="q5" value="1"> Lada</label><br>
+            <label><input type="radio" name="q5" value="0"> BMW</label><br><br>
+
+
+            <p><strong>6. Wen treffen sie unterwegs?</strong></p>
+            <label><input type="radio" name="q6" value="1"> Isa</label><br>
+            <label><input type="radio" name="q6" value="0"> Tatjana</label><br><br>
+
+
+            <p><strong>7. Wer erzählt die Geschichte?</strong></p>
+            <label><input type="radio" name="q7" value="1"> Maik</label><br>
+            <label><input type="radio" name="q7" value="0"> Tschick</label><br><br>
+
+
+            <p><strong>8. In welche Gegend wollen sie eigentlich?</strong></p>
+            <label><input type="radio" name="q8" value="1"> Walachei</label><br>
+            <label><input type="radio" name="q8" value="0"> Berlin</label><br><br>
+
+
+            <p><strong>9. Was ist ein wichtiges Thema des Buches?</strong></p>
+            <label><input type="radio" name="q9" value="0"> Zauberei</label><br>
+            <label><input type="radio" name="q9" value="1"> Freundschaft</label><br><br>
+
+
+            <p><strong>10. Was verändert sich bei Maik?</strong></p>
+            <label><input type="radio" name="q10" value="0"> Seine Haarfarbe</label><br>
+            <label><input type="radio" name="q10" value="1"> Sein Selbstbewusstsein</label><br><br>
+
+
+            <button type="button" onclick="checkQuiz()"
+            style="padding:15px 30px;border:none;border-radius:30px;background:#f4c542;font-weight:bold;cursor:pointer;">
+                Ergebnis anzeigen
+            </button>
+
+        </form>
+
+        <br>
+
+        <h3 id="result"></h3>
+
+    </div>
+
+</section>
+
+
+<section>
+
+    <h2 class="section-title">Meine Meinung</h2>
+
+    <div class="info-box">
+
+        <p>
+            „Tschick“ ist mehr als nur ein Roadtrip. Das Buch zeigt,
+            wie Freundschaft Menschen verändern kann und dass die
+            schönsten Abenteuer oft ungeplant beginnen.
+        </p>
+
+    </div>
+
+</section>
+
+
+<footer style="text-align:center;padding:40px;background:#050505;">
+
+    <p>Erstellt von: Dein Name</p>
+    <p>Deutschprojekt – Tschick</p>
+
+</footer>
+
+
+<script>
+
+function checkQuiz(){
+
+    let score = 0;
+
+    for(let i = 1; i <= 10; i++){
+
+        const answer = document.querySelector(
+            'input[name="q'+i+'"]:checked'
+        );
+
+        if(answer){
+            score += Number(answer.value);
+        }
+    }
+
+    let message = "";
+
+    if(score <= 4){
+        message = "🚗 " + score + "/10 – Zeit für einen neuen Roadtrip mit Maik und Tschick!";
+    }
+    else if(score <= 7){
+        message = "🌻 " + score + "/10 – Nicht schlecht! Du kennst dich gut aus.";
+    }
+    else if(score <= 9){
+        message = "🎬 " + score + "/10 – Echter Tschick-Experte!";
+    }
+    else{
+        message = "🏆 10/10 – Du könntest direkt mit in die Walachei fahren!";
+    }
+
+    document.getElementById("result").innerHTML = message;
+}
+
+</script>
+</body>
+</html>
